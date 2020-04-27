@@ -117,7 +117,7 @@
                 {% if barter['status'] == "Telah Dikirim" and barter['username'] != session.get('user-name')%}
 
                 <td class="project_progress"> 
-                  <a href="/dashboard/barter/terima/?idbarter={{barter['id']}}"><button class="btn btn-primary btn-sm"> Terima Barang</button></a>
+                  <a href="/dashboard/barter/terima/?idbarter={{barter['id']}}"><button class="btn btn-primary btn-sm" onclick="return validateDialog();"> Terima Barang</button></a>
                  
                   
                 </td>
@@ -137,14 +137,14 @@
                           <div class="card-body">
                             <div class="form-group">
                               <label for="nama">Nomor Resi</label>
-                              <input type="text" name="noresi" class="form-control" id="exampleInputEmail1" placeholder="noresi">
+                              <input type="text" name="noresi" class="form-control" id="exampleInputEmail1" placeholder="noresi" required>
 
                             </div> <div class="form-group">
                               <input type="hidden" name="status" class="form-control" id="exampleInputEmail1" placeholder="noresi" value="Telah Dikirim">
                             </div>
           
                           </div> <div class="form-group">
-                            <input type="hidden" name="idbarter" class="form-control" id="exampleInputEmail1" placeholder="noresi" value="{{barter['id']}}">
+                            <input type="hidden" name="idbarter" class="form-control" id="exampleInputEmail1" placeholder="noresi" value="{{barter['id']}}" >
                           </div>
         
                            

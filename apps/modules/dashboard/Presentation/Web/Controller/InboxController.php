@@ -19,7 +19,7 @@ class InboxController extends Controller
 
     public function indexAction()
     {
-        $inboxs = $this->db->query("SELECT * FROM  inbox WHERE usernamepenerima = '".$this->session->get('user-name')."'")->fetchAll();
+        $inboxs = $this->db->query("SELECT * FROM  inbox WHERE usernamepenerima = '".$this->session->get('user-name')."' ORDER BY time DESC")->fetchAll();
 
         $this->view->setVars([
                     "inboxs" =>$inboxs
@@ -31,7 +31,7 @@ class InboxController extends Controller
 
     public function terkirimAction()
     {
-        $outboxs = $this->db->query("SELECT * FROM  inbox WHERE usernamepengirim = '".$this->session->get('user-name')."'")->fetchAll();
+        $outboxs = $this->db->query("SELECT * FROM  inbox WHERE usernamepengirim = '".$this->session->get('user-name')."' ORDER BY time DESC")->fetchAll();
 
         $this->view->setVars([
                     "outboxs" =>$outboxs

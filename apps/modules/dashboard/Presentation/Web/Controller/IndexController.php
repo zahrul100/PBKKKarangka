@@ -20,9 +20,9 @@ class IndexController extends Controller
    
     }
     public function indexAction()
-    { 
-        
-        
+    {    
+        // $this->flash->success('The carrier was successfully activated');
+    
         $check = $this->db->query("SELECT id FROM  users WHERE username = '".$this->session->get('user-name')."'")->fetchAll();
         $id = $check[0]['id'];
         $barang = $this->db->query("SELECT * FROM  barang WHERE idpemilik = '".$id."' AND blokir = 0")->fetchAll();

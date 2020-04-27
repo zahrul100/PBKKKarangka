@@ -69,6 +69,7 @@ class AdminController extends Controller
     {
         
         $users = Users::findFirst($id);
+        $this->flashSession->success($users->username.' Telah Berhasil Dibanned');
         $users->banned = 1;
         $users->update();
         return $this->response->redirect('/dashboard/admin/user');
@@ -80,6 +81,7 @@ class AdminController extends Controller
     public function unbannedAction($id)
     {
         
+        $this->flashSession->success('Mengaktifkan User Berhasil');
         $users = Users::findFirst($id);
         $users->banned = 0;
         $users->update();

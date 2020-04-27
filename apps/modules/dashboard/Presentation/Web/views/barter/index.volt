@@ -127,10 +127,10 @@
                           <div class="card-body">
                             <div class="form-group">
                               <label for="nama">Nomor Resi</label>
-                              <input type="text" name="noresi" class="form-control" id="exampleInputEmail1" placeholder="noresi">
+                              <input type="text" name="noresi" class="form-control" id="exampleInputEmail1" placeholder="noresi" required>
 
                             </div> <div class="form-group">
-                              <input type="hidden" name="status" class="form-control" id="exampleInputEmail1" placeholder="noresi" value="Telah Dikirim">
+                              <input type="hidden"  name="status" class="form-control" id="exampleInputEmail1" placeholder="noresi" value="Telah Dikirim">
                             </div>
           
                           </div> <div class="form-group">

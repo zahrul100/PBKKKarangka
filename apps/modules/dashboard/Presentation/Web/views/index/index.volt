@@ -179,7 +179,7 @@
           </div> 
           </div>
 
-        <a href="/dashboard/upload/delete/{{barang['id']}}"><button class="btn btn-outline-primary">Hapus</button></a>
+        <a href="/dashboard/upload/delete/{{barang['id']}}"><button class="btn btn-outline-primary" onclick="return deleteDialog();">Hapus</button></a>
                   </div>
                   <!-- /.card-body -->
                 </div>

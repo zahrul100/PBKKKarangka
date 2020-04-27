@@ -146,14 +146,7 @@ $container->set(
 $container->set(
     'flash',
     function () {
-        $flash = new FlashDirect(
-            [
-                'error'   => 'alert alert-danger',
-                'success' => 'alert alert-success',
-                'notice'  => 'alert alert-info',
-                'warning' => 'alert alert-warning',
-            ]
-        );
+        $flash = new Phalcon\Flash\Direct();
 
         return $flash;
     }
@@ -162,16 +155,9 @@ $container->set(
 $container->set(
     'flashSession',
     function () {
-        $flash = new FlashSession(
-            [
-                'error'   => 'alert alert-danger',
-                'success' => 'alert alert-success',
-                'notice'  => 'alert alert-info',
-                'warning' => 'alert alert-warning',
-            ]
-        );
+        $flash = new \Phalcon\Flash\Session();
 
-        $flash->setAutoescape(false);
+        // $flash->setAutoescape(false);
         
         return $flash;
     }

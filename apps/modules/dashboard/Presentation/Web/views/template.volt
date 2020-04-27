@@ -210,6 +210,14 @@
 <script src="../../../dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../../dist/js/demo.js"></script>
+<script>
+  function deleteDialog() {
+      return confirm("Anda yakin ingin menghapus produk ini??")
+  }
 
+  function validateDialog() {
+      return confirm("Konfirmasi Penerimaan barang?")
+  }
+</script>
 </body>
 </html>

@@ -109,6 +109,9 @@
               </div> 
               </div>
               {% endif %}
+              {% if session.get('user-name') == null%}
+               <a href="/auth/login"><button class="btn btn-primary btn-lg">Kirim Pesan</button> </a>
+               {% else %}
                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Kirim Pesan</button>
             <div class="modal fade" id="myModal" role="dialog">
               <div class="modal-dialog"> 
@@ -157,7 +160,7 @@
             </div> 
             </div>
 
-
+            {% endif %}
 
             </div>
 
