@@ -13,6 +13,8 @@ $loader->registerNamespaces(array(
 	'Phalcon\Db\Adapter\Pdo' => APP_PATH . '/lib/Phalcon/Db/Adapter/Pdo',
 	'Phalcon\Db\Dialect' => APP_PATH . '/lib/Phalcon/Db/Dialect',
 	'Phalcon\Db\Result' => APP_PATH . '/lib/Phalcon/Db/Result',
+	
+	'Its\Common\Controller'	=> APP_PATH. '/controllers', 
 
 ));
 

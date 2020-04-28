@@ -10,10 +10,10 @@ use Phalcon\Mvc\ViewBaseInterface;
 use Phalcon\Mvc\View\Engine\Volt;
 use Phalcon\Flash\Direct as FlashDirect;
 use Phalcon\Flash\Session as FlashSession;
-
-
 use Phalcon\Session\Manager as SessionManager;
 use Phalcon\Session\Adapter\Stream;
+
+
 
 
 $container['config'] = function() use ($config) {
@@ -191,3 +191,12 @@ $container['db'] = function () use ($config) {
 );
 
 };
+
+$container->set(
+    'view',
+    function () {
+        $view = new View();
+        $view->setViewsDir(APP_PATH . '/views/');
+        return $view;
+    }
+);
